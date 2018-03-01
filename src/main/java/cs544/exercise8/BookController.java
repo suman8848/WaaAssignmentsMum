@@ -12,10 +12,14 @@ import javax.annotation.Resource;
 public class BookController {
 
 
+    @RequestMapping("/")
+    public String redirectRoot() {
+    	return "redirect:/books";
+    }
     @Resource
     private IBookDao bookDao;
 
-    @RequestMapping(value = "/books", method = RequestMethod.GET)
+        @RequestMapping(value = "/books", method = RequestMethod.GET)
 //    @GetMapping
     public String getAll(Model model ){
 

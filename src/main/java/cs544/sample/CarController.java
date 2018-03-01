@@ -21,10 +21,10 @@ public class CarController {
 	@Resource
 	private ICarDao carDao;
 	
-	@RequestMapping("/")
-	public String redirectRoot() {
-		return "redirect:/cars";
-	}
+	//@RequestMapping("/")
+	//public String redirectRoot() {
+	//	return "redirect:/cars";
+	//}
 	
 	@RequestMapping(value="/cars", method=RequestMethod.GET)
 	public String getAll(Model model) {
